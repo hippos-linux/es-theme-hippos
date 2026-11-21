@@ -62,6 +62,16 @@ Sora font: SIL Open Font License, see assets/fonts/OFL.txt.
       <activityColor>${accentText}</activityColor>
       <hotkeyColor>6B9BFF</hotkeyColor>
     </controllerActivity>
+    <controllerActivity name="controllerActivity" tinyScreen="true">
+      <pos>0.575 0.013</pos>
+      <size>0.2 0.04</size>
+    </controllerActivity>
+    <batteryIndicator name="batteryIndicator" tinyScreen="true">
+      <pos>0.665 0.013</pos>
+      <size>0.23 0.04</size>
+      <horizontalAlignment>right</horizontalAlignment>
+      <itemSpacing>0.01</itemSpacing>
+    </batteryIndicator>
   </view>
 
   <view name="menu">
