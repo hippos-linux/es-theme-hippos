@@ -22,6 +22,12 @@ Sora font: SIL Open Font License, see assets/fonts/OFL.txt.
     <fontDisplay>./assets/fonts/Sora-ExtraBold.ttf</fontDisplay>
   </variables>
 
+  <!-- Background motion: Still stops the planet and flare animations, so ES can idle and save battery. -->
+  <subset name="motion" displayName="Background motion">
+    <include name="animated" displayName="Animated"></include>
+    <include name="still" displayName="Still"></include>
+  </subset>
+
   <view name="splash">
     <image name="background">
       <path>./assets/splash.jpg</path>
@@ -127,7 +133,7 @@ Sora font: SIL Open Font License, see assets/fonts/OFL.txt.
       <linearSmooth>true</linearSmooth>
       <zIndex>0</zIndex>
       <scaleOrigin>0.543 0.478</scaleOrigin>
-      <storyboard event="activate" repeat="forever" autoReverse="true">
+      <storyboard event="activate" repeat="forever" autoReverse="true" ifSubset="motion:animated">
         <animation property="scale" from="1" to="1.05" duration="38000" mode="EaseInOut"/>
       </storyboard>
     </image>
@@ -138,7 +144,7 @@ Sora font: SIL Open Font License, see assets/fonts/OFL.txt.
       <size>0.40 0.71</size>
       <linearSmooth>true</linearSmooth>
       <zIndex>1</zIndex>
-      <storyboard event="activate" repeat="forever" autoReverse="true">
+      <storyboard event="activate" repeat="forever" autoReverse="true" ifSubset="motion:animated">
         <animation property="opacity" from="0.15" to="0.85" duration="5200" mode="EaseInOut"/>
       </storyboard>
     </image>
